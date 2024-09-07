@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cmdhyn1vg17rh"]
 
-[ext_resource type="Texture2D" uid="uid://cv2m8l1tppxxe" path="res://Assets/arm3.png" id="1_4snns"]
+[ext_resource type="Texture2D" uid="uid://be6gvsinwfo2j" path="res://Assets/arm3.png" id="1_4snns"]
 [ext_resource type="Script" path="res://scenes/VisualArm2/visual_arm_2.gd" id="1_rwm0r"]
-[ext_resource type="Texture2D" uid="uid://cra4lhq4v0teu" path="res://Assets/arm2.png" id="2_lmv6y"]
-[ext_resource type="Texture2D" uid="uid://d4f8er0inq82u" path="res://Assets/arm1.png" id="3_b88la"]
-[ext_resource type="Texture2D" uid="uid://bu2h0h1usfbqg" path="res://Assets/Grater.png" id="4_sgpqg"]
+[ext_resource type="Texture2D" uid="uid://2smowdsxrs6e" path="res://Assets/arm2.png" id="2_lmv6y"]
+[ext_resource type="Texture2D" uid="uid://h3fn0me24uyt" path="res://Assets/arm1.png" id="3_b88la"]
+[ext_resource type="Texture2D" uid="uid://br4702ysxhn4d" path="res://Assets/Grater.png" id="4_sgpqg"]
 
 [sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_il0mv"]
 target_nodepath = NodePath("../Marker2D")
@@ -45,6 +45,7 @@ modification_count = 1
 modifications/0 = SubResource("SkeletonModification2DCCDIK_il0mv")
 
 [node name="VisualArm2" type="Node2D" node_paths=PackedStringArray("ik_target")]
+texture_filter = 1
 position = Vector2(596, 260)
 script = ExtResource("1_rwm0r")
 ik_target = NodePath("Marker2D")
@@ -57,7 +58,6 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 auto_calculate_length_and_angle = false
 length = 47.0106
 bone_angle = -1.21888
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D"]
 position = Vector2(84, 30)
@@ -70,7 +70,6 @@ rest = Transform2D(1, 0, 0, 1, 47, -1)
 auto_calculate_length_and_angle = false
 length = 81.0062
 bone_angle = 0.707319
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D"]
 position = Vector2(39, 5)
@@ -83,7 +82,6 @@ rest = Transform2D(1, 0, 0, 1, 81, 1)
 auto_calculate_length_and_angle = false
 length = 38.239
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D"]
 position = Vector2(-44, -2)
@@ -93,10 +91,11 @@ texture = ExtResource("3_b88la")
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D"]
 position = Vector2(44, 0)
 rest = Transform2D(1, 0, 0, 1, 44, 0)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
+visible = false
 position = Vector2(204, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Marker2D"]
+visible = false
 texture = ExtResource("4_sgpqg")

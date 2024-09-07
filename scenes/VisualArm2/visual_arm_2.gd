@@ -13,5 +13,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	ik_target.global_position = get_global_mouse_position()
+	# stop setting target
+	#ik_target.global_position = get_global_mouse_position()
 	pass
