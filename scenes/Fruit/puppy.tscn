@@ -15,6 +15,8 @@ polygon = PackedVector2Array(-13, -22.1, -13, -20, -17, -17, -17, -8.2, -15, -6.
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_nmydq")]
 parent = NodePath("..")
+grate_hardness = 6.0
+health = 300
 particle_color = Color(1, 0, 0, 1)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="gratecomponent"]

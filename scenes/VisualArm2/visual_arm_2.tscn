@@ -92,9 +92,9 @@ rotation = 3.13277
 texture = ExtResource("3_b88la")
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D"]
-position = Vector2(22.0366, -0.470367)
-rotation = 2.10069
-scale = Vector2(0.999994, 0.999994)
+position = Vector2(36.985, -0.340561)
+rotation = 2.57618
+scale = Vector2(1.00001, 1.00001)
 rest = Transform2D(1, 0, 0, 1, 44, 0)
 metadata/_local_pose_override_enabled_ = true
 

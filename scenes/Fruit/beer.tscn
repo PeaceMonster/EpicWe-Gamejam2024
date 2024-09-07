@@ -6,6 +6,7 @@
 
 [node name="Beer" type="Node2D"]
 texture_filter = 1
+scale = Vector2(2, 2)
 
 [node name="grabcomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("1_53ocq")]
 parent = NodePath("..")
@@ -15,6 +16,8 @@ polygon = PackedVector2Array(-14, -26.1, -14, -24, -16.7, -22, -20.2, -22, -16, 
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_mbrg6")]
 parent = NodePath("..")
+grate_hardness = 7.0
+health = 60
 particle_color = Color(0.980392, 0.772549, 0.298039, 1)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="gratecomponent"]
