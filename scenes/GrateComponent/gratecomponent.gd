@@ -1,12 +1,8 @@
 extends Area2D
 
-signal grate_done
-
-
-
 @export var parent : Node2D
 @export var grate_hardness : = 10.0
-@export var health : = 20
+@export var health : = 20.0
 @onready var particles : = $CPUParticles2D
 @export var particle_color : Color = Color.WHITE
 var rng = RandomNumberGenerator.new()
@@ -18,7 +14,7 @@ func _ready() -> void:
 
 func grate(velocity: float, delta: float):
 	if velocity * delta > grate_hardness / 100:
-		health -= delta
+		health -= 0.1
 		particles.emitting = true
 	
 	if health <= 0:
@@ -27,17 +23,18 @@ func grate(velocity: float, delta: float):
 
 
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	grating = true
 	
 
-func _on_area_exited(area: Area2D) -> void:
+func _on_area_exited(_area: Area2D) -> void:
 	grating = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed('skip_item'):
 		EventBus.done_grating_emit()
 		parent.queue_free()
+		
 
 func _process(delta: float) -> void:
 	if grating and not prev_pos == self.global_position:

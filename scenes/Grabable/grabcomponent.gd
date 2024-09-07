@@ -26,14 +26,14 @@ func _input(event):
 			grabbed = false
 
 # Vi skal nok finde ud af at gøre dette 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if grabbed:
 		parent.global_position = grabber.global_position - position_delta
 
 func removed():
 	emit_signal("grab_end")
 
-func _on_area_exited(area: Area2D) -> void:
+func _on_area_exited(_area: Area2D) -> void:
 	mouse_inside = false
 
 
