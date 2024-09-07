@@ -15,9 +15,9 @@ var grating := false
 func _ready() -> void:
 	particles.color = particle_color
 
-func grate():
-	if rng.randf() < (1.0 / grate_hardness):
-		health -= 1
+func grate(delta: float):
+	if rng.randf() < (1 / grate_hardness):
+		health -= delta
 		particles.emitting = true
 	
 	if health <= 0:
@@ -35,4 +35,4 @@ func _on_area_exited(area: Area2D) -> void:
 
 func _process(delta: float) -> void:
 	if grating:
-		grate()
+		grate(delta)

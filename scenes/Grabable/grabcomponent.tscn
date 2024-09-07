@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://grabcomponent.gd" id="1_tir7m"]
 
 [node name="grabcomponent" type="Area2D"]
+monitorable = false
 script = ExtResource("1_tir7m")
