@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br4702ysxhn4d"
-path="res://.godot/imported/Grater.png-eb528d411ee48196e4f48ceae0d9468f.ctex"
+uid="uid://yn2b2dv2lvsp"
+path="res://.godot/imported/watermelon.png-d0b9460fe8fba8e4281f1a73909d3661.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Grater.png"
-dest_files=["res://.godot/imported/Grater.png-eb528d411ee48196e4f48ceae0d9468f.ctex"]
+source_file="res://Assets/watermelon.png"
+dest_files=["res://.godot/imported/watermelon.png-d0b9460fe8fba8e4281f1a73909d3661.ctex"]
 
 [params]
 

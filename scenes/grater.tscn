@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch0ukib0edke5"]
+
+[ext_resource type="Texture2D" uid="uid://bgos12knabh6s" path="res://Assets/Grater.png" id="1_hangn"]
+
+[node name="Grater" type="Node2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hangn")
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-8, -39.6, -8, -38, -13, -38, -17, -33, -18.3, -33, -19.4, -30.5, -16.9, -28.1, -19.5, -27, -21.5, -27, -28.5, 0, -29.3, 0, -30.4, 2.5, -27.8, 5, -31.2, 5, -32.3, 7.2, -29.4, 11.2, -31.7, 13, -34, 13, -34, 28.2, -35.8, 30, -38.5, 30, -40.5, 37, -41.5, 37, -42.3, 39.8, -39, 42, -39, 43.7, -5, 48.7, -5, 50, 3.3, 50, 3.7, 51, 9.6, 51, 27.5, 40, 30.9, 40, 22, 16.5, 22, 11.7, 9, -28.3, 9, -37.2, 4.5, -35, 3.5, -35, 2.9, -35.3, 2.4, -35, 0.199997, -33.6, 0, -34.3, 0, -37.6)

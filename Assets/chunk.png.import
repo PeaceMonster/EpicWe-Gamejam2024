@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br4702ysxhn4d"
-path="res://.godot/imported/Grater.png-eb528d411ee48196e4f48ceae0d9468f.ctex"
+uid="uid://yrcgjsq4eiv"
+path="res://.godot/imported/chunk.png-b48aa7b6c4e137386a968bcad4200e32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Grater.png"
-dest_files=["res://.godot/imported/Grater.png-eb528d411ee48196e4f48ceae0d9468f.ctex"]
+source_file="res://Assets/chunk.png"
+dest_files=["res://.godot/imported/chunk.png-b48aa7b6c4e137386a968bcad4200e32.ctex"]
 
 [params]
 

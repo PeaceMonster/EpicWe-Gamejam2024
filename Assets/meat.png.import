@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br4702ysxhn4d"
-path="res://.godot/imported/Grater.png-eb528d411ee48196e4f48ceae0d9468f.ctex"
+uid="uid://sm8x7t5vgj0h"
+path="res://.godot/imported/meat.png-80c37050ee3966cbd8f70af053c989f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Grater.png"
-dest_files=["res://.godot/imported/Grater.png-eb528d411ee48196e4f48ceae0d9468f.ctex"]
+source_file="res://Assets/meat.png"
+dest_files=["res://.godot/imported/meat.png-80c37050ee3966cbd8f70af053c989f5.ctex"]
 
 [params]
 
