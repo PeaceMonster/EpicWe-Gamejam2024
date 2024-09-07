@@ -19,10 +19,10 @@ func _input(event):
 			grabbed = false
 			print("Release")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Vi skal nok finde ud af at gøre dette 
 func _process(delta: float) -> void:
 	if grabbed:
-		parent.position = grabber.global_position - position_delta
+		parent.global_position = grabber.global_position - position_delta
 
 
 func _on_area_exited(area: Area2D) -> void:

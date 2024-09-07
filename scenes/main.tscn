@@ -31,3 +31,5 @@ scale = Vector2(3, 3)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(888, 543)
+
+[node name="Banana" parent="SpawnPoint" instance=ExtResource("3_taqu3")]
