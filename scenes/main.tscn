@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://lduf66oqur7l"]
+[gd_scene load_steps=6 format=3 uid="uid://lduf66oqur7l"]
 
 [ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_sicte"]
 [ext_resource type="PackedScene" uid="uid://cuc5i8tvyxpg1" path="res://scenes/Grabable/onion.tscn" id="2_0khw6"]
 [ext_resource type="PackedScene" uid="uid://cj8j80gyotjr4" path="res://scenes/Fruit/cucumber.tscn" id="3_lqxpi"]
 [ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_taqu3"]
+[ext_resource type="PackedScene" uid="uid://0e5avvpsk4dp" path="res://scenes/MouseTarget/mouse_target.tscn" id="5_mli8h"]
 
 [node name="Main" type="Node2D"]
+
+[node name="MouseTarget" parent="." instance=ExtResource("5_mli8h")]
 
 [node name="Onion" parent="." instance=ExtResource("2_0khw6")]
 position = Vector2(901, 468)
@@ -17,5 +20,5 @@ position = Vector2(855, 190)
 position = Vector2(741, 482)
 
 [node name="Grater" parent="." instance=ExtResource("1_sicte")]
-position = Vector2(539, 337)
+position = Vector2(380, 266)
 scale = Vector2(2, 2)

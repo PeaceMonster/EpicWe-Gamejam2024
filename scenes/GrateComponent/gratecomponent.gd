@@ -11,6 +11,7 @@ signal grate_done
 @export var particle_color : Color = Color.WHITE
 var rng = RandomNumberGenerator.new()
 var grating := false
+var prev_pos := Vector2(0,0)
 
 func _ready() -> void:
 	particles.color = particle_color
@@ -34,5 +35,8 @@ func _on_area_exited(area: Area2D) -> void:
 
 
 func _process(delta: float) -> void:
-	if grating:
+	print(prev_pos)
+	print(position)
+	if grating and not prev_pos == self.global_position:
 		grate(delta)
+	prev_pos = self.global_position

@@ -5,3 +5,6 @@
 [node name="grabcomponent" type="Area2D"]
 monitorable = false
 script = ExtResource("1_tir7m")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
