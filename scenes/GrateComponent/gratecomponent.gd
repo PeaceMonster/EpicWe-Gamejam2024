@@ -22,6 +22,7 @@ func grate(delta: float):
 		particles.emitting = true
 	
 	if health <= 0:
+		EventBus.done_grating_emit()
 		parent.queue_free()
 
 
@@ -35,8 +36,8 @@ func _on_area_exited(area: Area2D) -> void:
 
 
 func _process(delta: float) -> void:
-	print(prev_pos)
-	print(position)
 	if grating and not prev_pos == self.global_position:
 		grate(delta)
 	prev_pos = self.global_position
+
+	

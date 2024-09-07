@@ -1,30 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://lduf66oqur7l"]
+[gd_scene load_steps=5 format=3 uid="uid://lduf66oqur7l"]
 
 [ext_resource type="PackedScene" uid="uid://cmdhyn1vg17rh" path="res://scenes/VisualArm2/visual_arm_2.tscn" id="1_2u1ck"]
 [ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_sicte"]
-[ext_resource type="PackedScene" uid="uid://cuc5i8tvyxpg1" path="res://scenes/Grabable/onion.tscn" id="2_0khw6"]
-[ext_resource type="PackedScene" uid="uid://cj8j80gyotjr4" path="res://scenes/Fruit/cucumber.tscn" id="3_lqxpi"]
-[ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_taqu3"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_yymtn"]
 [ext_resource type="PackedScene" uid="uid://0e5avvpsk4dp" path="res://scenes/MouseTarget/mouse_target.tscn" id="5_mli8h"]
 
 [node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_yymtn")
 
 [node name="VisualArm2" parent="." node_paths=PackedStringArray("ik_target") instance=ExtResource("1_2u1ck")]
-position = Vector2(900, 283)
+position = Vector2(1045, 314)
 scale = Vector2(3, 3)
 ik_target = NodePath("../MouseTarget")
 
 [node name="MouseTarget" parent="." instance=ExtResource("5_mli8h")]
 
-[node name="Onion" parent="." instance=ExtResource("2_0khw6")]
-position = Vector2(901, 468)
-
-[node name="Banana" parent="." instance=ExtResource("3_taqu3")]
-position = Vector2(855, 190)
-
-[node name="Cucumber" parent="." instance=ExtResource("3_lqxpi")]
-position = Vector2(741, 482)
-
 [node name="Grater" parent="." instance=ExtResource("1_sicte")]
-position = Vector2(572, 284)
-scale = Vector2(2, 2)
+position = Vector2(592, 290)
+scale = Vector2(3, 3)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]

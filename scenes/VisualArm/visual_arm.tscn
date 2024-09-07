@@ -1,13 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1hf5fhmt1nnj"]
+[gd_scene load_steps=7 format=3 uid="uid://d1hf5fhmt1nnj"]
 
 [ext_resource type="Texture2D" uid="uid://be6gvsinwfo2j" path="res://Assets/arm3.png" id="1_e0a7n"]
 [ext_resource type="Script" path="res://scenes/VisualArm/visual_arm.gd" id="1_wudbv"]
 [ext_resource type="Texture2D" uid="uid://2smowdsxrs6e" path="res://Assets/arm2.png" id="2_srbhp"]
 [ext_resource type="Texture2D" uid="uid://h3fn0me24uyt" path="res://Assets/arm1.png" id="3_veuiq"]
-[ext_resource type="Texture2D" uid="uid://7w38rli5gjvf" path="res://Assets/banana.png" id="4_u257v"]
 
 [sub_resource type="SkeletonModification2DFABRIK" id="SkeletonModification2DFABRIK_ty22j"]
-target_nodepath = NodePath("../Target")
 fabrik_data_chain_length = 3
 joint_data/0/bone_index = 0
 joint_data/0/bone2d_node = NodePath("Bone2D")
@@ -24,10 +22,9 @@ enabled = true
 modification_count = 1
 modifications/0 = SubResource("SkeletonModification2DFABRIK_ty22j")
 
-[node name="VisualArm" type="Node2D" node_paths=PackedStringArray("ik_target")]
+[node name="VisualArm" type="Node2D"]
 position = Vector2(540, 260)
 script = ExtResource("1_wudbv")
-ik_target = NodePath("Target")
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 modification_stack = SubResource("SkeletonModificationStack2D_off31")
@@ -37,7 +34,6 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 auto_calculate_length_and_angle = false
 length = 47.0106
 bone_angle = -1.21888
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D"]
 position = Vector2(84, 30)
@@ -50,7 +46,6 @@ rest = Transform2D(1, 0, 0, 1, 47, -1)
 auto_calculate_length_and_angle = false
 length = 81.0062
 bone_angle = 0.707319
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D"]
 position = Vector2(39, 5)
@@ -63,15 +58,8 @@ rest = Transform2D(1, 0, 0, 1, 81, 1)
 auto_calculate_length_and_angle = false
 length = 38.239
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D"]
 position = Vector2(-44, -2)
 rotation = 3.13277
 texture = ExtResource("3_veuiq")
-
-[node name="Target" type="Marker2D" parent="."]
-position = Vector2(5, -54)
-
-[node name="Banana" type="Sprite2D" parent="Target"]
-texture = ExtResource("4_u257v")

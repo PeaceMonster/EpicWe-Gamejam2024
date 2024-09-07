@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://fs8ocydrch60"]
 
-[ext_resource type="Script" path="res://grabcomponent.gd" id="1_tir7m"]
+[ext_resource type="Script" path="res://scenes/Grabable/grabcomponent.gd" id="1_tir7m"]
 
 [node name="grabcomponent" type="Area2D"]
 monitorable = false
