@@ -1,23 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://lduf66oqur7l"]
+[gd_scene load_steps=12 format=3 uid="uid://lduf66oqur7l"]
 
 [ext_resource type="PackedScene" uid="uid://cmdhyn1vg17rh" path="res://scenes/VisualArm2/visual_arm_2.tscn" id="1_2u1ck"]
 [ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_sicte"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_yymtn"]
+[ext_resource type="PackedScene" uid="uid://cuc5i8tvyxpg1" path="res://scenes/Fruit/onion.tscn" id="2_0khw6"]
+[ext_resource type="PackedScene" uid="uid://cj8j80gyotjr4" path="res://scenes/Fruit/cucumber.tscn" id="3_lqxpi"]
+[ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_taqu3"]
 [ext_resource type="PackedScene" uid="uid://0e5avvpsk4dp" path="res://scenes/MouseTarget/mouse_target.tscn" id="5_mli8h"]
+[ext_resource type="PackedScene" uid="uid://c4028wfe8aykd" path="res://scenes/Fruit/meat.tscn" id="5_qm23h"]
+[ext_resource type="PackedScene" uid="uid://cobr0rixlp10j" path="res://scenes/Fruit/fish.tscn" id="6_74t0m"]
+[ext_resource type="PackedScene" uid="uid://8fqgluqgr5i8" path="res://scenes/Fruit/beer.tscn" id="7_5l8km"]
+[ext_resource type="PackedScene" uid="uid://2kym6jgtl4o0" path="res://scenes/Fruit/puppy.tscn" id="8_pfeih"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_yymtn")
+subjects = Array[PackedScene]([ExtResource("2_0khw6"), ExtResource("3_taqu3"), ExtResource("3_lqxpi"), ExtResource("5_qm23h"), ExtResource("6_74t0m"), ExtResource("7_5l8km"), ExtResource("8_pfeih")])
 
 [node name="VisualArm2" parent="." node_paths=PackedStringArray("ik_target") instance=ExtResource("1_2u1ck")]
-position = Vector2(1045, 314)
+position = Vector2(1112, 321)
 scale = Vector2(3, 3)
 ik_target = NodePath("../MouseTarget")
 
 [node name="MouseTarget" parent="." instance=ExtResource("5_mli8h")]
+position = Vector2(694, 309)
 
 [node name="Grater" parent="." instance=ExtResource("1_sicte")]
-position = Vector2(592, 290)
+position = Vector2(664, 321)
 scale = Vector2(3, 3)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(888, 543)

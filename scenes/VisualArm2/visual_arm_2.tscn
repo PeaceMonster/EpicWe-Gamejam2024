@@ -58,6 +58,7 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 auto_calculate_length_and_angle = false
 length = 47.0106
 bone_angle = -1.21888
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D"]
 position = Vector2(84, 30)
@@ -70,6 +71,7 @@ rest = Transform2D(1, 0, 0, 1, 47, -1)
 auto_calculate_length_and_angle = false
 length = 81.0062
 bone_angle = 0.707319
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D"]
 position = Vector2(39, 5)
@@ -82,6 +84,7 @@ rest = Transform2D(1, 0, 0, 1, 81, 1)
 auto_calculate_length_and_angle = false
 length = 38.239
 bone_angle = 0.0
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D"]
 position = Vector2(-44, -2)
@@ -89,8 +92,11 @@ rotation = 3.13277
 texture = ExtResource("3_b88la")
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D"]
-position = Vector2(44, 0)
+position = Vector2(22.0366, -0.470367)
+rotation = 2.10069
+scale = Vector2(0.999994, 0.999994)
 rest = Transform2D(1, 0, 0, 1, 44, 0)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
 visible = false
