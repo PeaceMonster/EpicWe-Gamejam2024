@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bti81tu7b8qs1"]
+
+[node name="Arm" type="Skeleton2D"]
+
+[node name="Bone2D" type="Bone2D" parent="."]
+
+[node name="Bone2D" type="Bone2D" parent="Bone2D"]
