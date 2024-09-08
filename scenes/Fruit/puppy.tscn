@@ -44,5 +44,5 @@ grate_component = NodePath("../gratecomponent")
 
 [node name="GrateSoundEmitter" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("5_ag82r")]
 stream = ExtResource("6_1snq5")
-volume_db = 10.0
+volume_db = 14.0
 grate_component = NodePath("../gratecomponent")
