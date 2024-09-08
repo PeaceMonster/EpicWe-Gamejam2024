@@ -58,10 +58,13 @@ ik_target = NodePath("Marker2D")
 modification_stack = SubResource("SkeletonModificationStack2D_6cosv")
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D"]
+rotation = 0.00993425
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 auto_calculate_length_and_angle = false
 length = 47.0106
 bone_angle = -1.21888
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D"]
 position = Vector2(84, 30)
@@ -69,11 +72,14 @@ rotation = -2.5662
 texture = ExtResource("1_4snns")
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D"]
-position = Vector2(47, -1)
+position = Vector2(46.9999, -1)
+rotation = -0.0119441
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 47, -1)
 auto_calculate_length_and_angle = false
 length = 81.0062
 bone_angle = 0.707319
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D"]
 position = Vector2(39, 5)
@@ -81,24 +87,28 @@ rotation = 3.02347
 texture = ExtResource("2_lmv6y")
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D"]
-position = Vector2(81, 1)
+position = Vector2(81.0001, 1)
+rotation = 0.0699213
 rest = Transform2D(1, 0, 0, 1, 81, 1)
 auto_calculate_length_and_angle = false
 length = 18.0
 bone_angle = -0.524703
+metadata/_local_pose_override_enabled_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D" groups=["hand"]]
 position = Vector2(-44, -2)
 rotation = 3.13277
 texture = ExtResource("3_b88la")
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D/Bone2D"]
-position = Vector2(17, -1)
+position = Vector2(16.9999, -0.999924)
+rotation = -0.0587543
 scale = Vector2(1.00001, 1.00001)
 rest = Transform2D(1, 0, 0, 1, 44, 0)
 auto_calculate_length_and_angle = false
 length = 12.045
 bone_angle = -360.0
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
 visible = false

@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var subjects : Array[PackedScene]
+@export var killhand : PackedScene
 
 @onready var spawn_point: Marker2D = $SpawnPoint
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -29,6 +30,13 @@ func spawn_next():
 	if spawn_index < len(subjects):
 		spawn_item(subjects[spawn_index])
 		spawn_index += 1
+	elif spawn_index == len(subjects):
+		spawn_index += 1
+		var hand = get_tree().get_first_node_in_group("hand")
+		var killhand_inst = killhand.instantiate()
+		hand.add_child(killhand_inst)
+		killhand_inst.find_child("gratecomponent").parent = hand
+		animation_player.play("new_spawn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

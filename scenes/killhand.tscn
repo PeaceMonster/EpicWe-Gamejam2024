@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://yiecutbbdf4c"]
+
+[ext_resource type="PackedScene" uid="uid://dfeuomg6mlqm6" path="res://scenes/GrateComponent/gratecomponent.tscn" id="1_n47h6"]
+[ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="2_dmh4m"]
+
+[node name="killhand" type="Node2D"]
+position = Vector2(-53.9431, -1.21162)
+
+[node name="gratecomponent" parent="." instance=ExtResource("1_n47h6")]
+position = Vector2(734.153, 257.039)
+rotation = -3.08664
+scale = Vector2(0.999912, 0.999912)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gratecomponent"]
+position = Vector2(693.296, 218.099)
+rotation = 3.08664
+scale = Vector2(1.00009, 1.00009)
+polygon = PackedVector2Array(-38, -11.9, -62.4, -32, -63.4, -32, -65, -31.3, -65, -30.1, -68, -28.1, -68, -23.3, -63.5, -18, -85.5, -18, -90.5, -2, -91.2, -2, -92.3, 0.200001, -85, 10.5, -85, 12.9, -56, 14, -47.3, 14, -40.3, 8, -38, 8)
+
+[node name="GrateChunks" parent="gratecomponent" node_paths=PackedStringArray("grate_component") instance=ExtResource("2_dmh4m")]
+position = Vector2(756.293, 207.295)
+rotation = -3.14159
+color = Color(1, 0, 0, 1)
+grate_component = NodePath("..")

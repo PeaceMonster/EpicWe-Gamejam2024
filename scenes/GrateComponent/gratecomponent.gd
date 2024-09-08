@@ -10,7 +10,7 @@ signal grate_stop
 @export var grate_hardness : = 10.0
 @export var health : = 20.0
 @export var particle_color : Color = Color.WHITE
-var rng = RandomNumberGenerator.new()
+
 var grating := false
 var prev_pos := Vector2(0,0)
 
@@ -19,6 +19,7 @@ var prev_pos := Vector2(0,0)
 func grate(velocity: float, delta: float):
 	if velocity * delta > grate_hardness / 100:
 		health -= 0.1
+		print(health)
 		emit_signal("grate_start")
 		if not audio_stream_player.playing:
 			audio_stream_player.play()
@@ -33,6 +34,7 @@ func grate(velocity: float, delta: float):
 
 func _on_area_entered(_area: Area2D) -> void:
 	grating = true
+
 	
 
 func _on_area_exited(_area: Area2D) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1uubw6agml6o"]
+[gd_scene load_steps=12 format=3 uid="uid://b1uubw6agml6o"]
 
 [ext_resource type="PackedScene" uid="uid://dnsjlh8k6xg8t" path="res://scenes/SubjectSpawner/subject_spawner.tscn" id="1_77o67"]
 [ext_resource type="Texture2D" uid="uid://u3xga7u1vnxj" path="res://Assets/conveyorbelt.png" id="1_on728"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://8fqgluqgr5i8" path="res://scenes/Fruit/beer.tscn" id="8_ch4ak"]
 [ext_resource type="PackedScene" uid="uid://2kym6jgtl4o0" path="res://scenes/Fruit/puppy.tscn" id="9_e0pkr"]
 [ext_resource type="PackedScene" uid="uid://bat53wmsok6t2" path="res://scenes/Fruit/baby.tscn" id="10_hhxhk"]
+[ext_resource type="PackedScene" uid="uid://yiecutbbdf4c" path="res://scenes/killhand.tscn" id="11_1cm6r"]
 
 [node name="ConveyorBelt" type="Node2D"]
 texture_filter = 1
@@ -22,6 +23,7 @@ texture = ExtResource("1_on728")
 [node name="SubjectSpawner" parent="." instance=ExtResource("1_77o67")]
 position = Vector2(311, -111)
 subjects = Array[PackedScene]([ExtResource("3_31b3i"), ExtResource("4_3axel"), ExtResource("5_unfkc"), ExtResource("6_a1qfb"), ExtResource("7_d7wf1"), ExtResource("8_ch4ak"), ExtResource("9_e0pkr"), ExtResource("10_hhxhk")])
+killhand = ExtResource("11_1cm6r")
 
 [node name="Timer" type="Timer" parent="SubjectSpawner"]
 one_shot = true
