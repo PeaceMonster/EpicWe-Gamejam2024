@@ -1,14 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://dnsjlh8k6xg8t"]
+[gd_scene load_steps=16 format=3 uid="uid://dnsjlh8k6xg8t"]
 
 [ext_resource type="Script" path="res://scenes/SubjectSpawner/SubjectSpawner.gd" id="1_oct0y"]
 [ext_resource type="PackedScene" uid="uid://cuc5i8tvyxpg1" path="res://scenes/Fruit/onion.tscn" id="2_33tfa"]
 [ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_ofq3i"]
 [ext_resource type="PackedScene" uid="uid://cj8j80gyotjr4" path="res://scenes/Fruit/cucumber.tscn" id="4_xjnt8"]
 [ext_resource type="PackedScene" uid="uid://c4028wfe8aykd" path="res://scenes/Fruit/meat.tscn" id="5_02wl5"]
+[ext_resource type="PackedScene" uid="uid://drsmqlpywiomd" path="res://scenes/Fruit/watermelon.tscn" id="5_a2pca"]
 [ext_resource type="PackedScene" uid="uid://cobr0rixlp10j" path="res://scenes/Fruit/fish.tscn" id="6_7vefs"]
 [ext_resource type="PackedScene" uid="uid://8fqgluqgr5i8" path="res://scenes/Fruit/beer.tscn" id="7_hkmvy"]
 [ext_resource type="PackedScene" uid="uid://2kym6jgtl4o0" path="res://scenes/Fruit/puppy.tscn" id="8_582u0"]
+[ext_resource type="PackedScene" uid="uid://bgspvwc2plmvh" path="res://scenes/Fruit/leg.tscn" id="9_bm3er"]
 [ext_resource type="AudioStream" uid="uid://dri51l0wwc4sn" path="res://Sounds/conveyor_no_fade.wav" id="9_rjnjj"]
+[ext_resource type="PackedScene" uid="uid://bat53wmsok6t2" path="res://scenes/Fruit/baby.tscn" id="11_7c1gg"]
 
 [sub_resource type="Animation" id="Animation_haq7x"]
 length = 0.001
@@ -97,7 +100,7 @@ _data = {
 
 [node name="SubjectSpawner" type="Node2D"]
 script = ExtResource("1_oct0y")
-subjects = Array[PackedScene]([ExtResource("2_33tfa"), ExtResource("3_ofq3i"), ExtResource("4_xjnt8"), ExtResource("5_02wl5"), ExtResource("6_7vefs"), ExtResource("7_hkmvy"), ExtResource("8_582u0")])
+subjects = Array[PackedScene]([ExtResource("2_33tfa"), ExtResource("4_xjnt8"), ExtResource("3_ofq3i"), ExtResource("5_a2pca"), ExtResource("5_02wl5"), ExtResource("6_7vefs"), ExtResource("7_hkmvy"), ExtResource("9_bm3er"), ExtResource("8_582u0"), ExtResource("11_7c1gg")])
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(826.485, 445)

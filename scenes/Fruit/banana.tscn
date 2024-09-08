@@ -24,7 +24,8 @@ polygon = PackedVector2Array(17, -22, 8, -10.7, 8, -9, -5, 0, -26.3, 0, -27.4, 2
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("3_rxbgv")]
 monitorable = false
 parent = NodePath("..")
-health = 30
+grate_hardness = 6.0
+health = 10.0
 particle_color = Color(0.913725, 0.807843, 0.0941176, 1)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="gratecomponent"]
@@ -36,5 +37,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_gumvy")
 
 [node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_rlru0")]
-color = Color(0.913725, 0.807843, 0.0941176, 1)
+emission_sphere_radius = 50.0
+initial_velocity_min = 450.0
+initial_velocity_max = 450.0
+color = Color(1, 0.88, 0.1, 1)
 grate_component = NodePath("../gratecomponent")

@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://wnjmnf8xp21j"]
+[gd_scene load_steps=12 format=3 uid="uid://wnjmnf8xp21j"]
 
+[ext_resource type="PackedScene" uid="uid://cmdhyn1vg17rh" path="res://scenes/VisualArm2/visual_arm_2.tscn" id="1_rt171"]
 [ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_vb3w3"]
 [ext_resource type="PackedScene" uid="uid://bat53wmsok6t2" path="res://scenes/Fruit/baby.tscn" id="2_0f4fv"]
 [ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_akfnk"]
@@ -13,32 +14,36 @@
 
 [node name="Sizing" type="Node2D"]
 
+[node name="VisualArm2" parent="." instance=ExtResource("1_rt171")]
+position = Vector2(298, 545)
+scale = Vector2(3.25, 3.25)
+
 [node name="Grater" parent="." instance=ExtResource("1_vb3w3")]
 position = Vector2(127, 129)
 
 [node name="Onion" parent="." instance=ExtResource("8_bf1cp")]
-position = Vector2(295, 140)
+position = Vector2(322, 137)
 
 [node name="Banana" parent="." instance=ExtResource("3_akfnk")]
-position = Vector2(492, 138)
+position = Vector2(653, 139)
 
 [node name="Cucumber" parent="." instance=ExtResource("5_cq6i6")]
-position = Vector2(651, 141)
+position = Vector2(473, 131)
 
 [node name="Beer" parent="." instance=ExtResource("4_mdrci")]
-position = Vector2(831, 144)
+position = Vector2(1016, 134)
 
 [node name="Fish" parent="." instance=ExtResource("6_ir4gw")]
-position = Vector2(448, 359)
+position = Vector2(452, 349)
 
 [node name="Watermelon" parent="." instance=ExtResource("10_lvait")]
-position = Vector2(1046, 135)
+position = Vector2(821, 110)
 
 [node name="Baby" parent="." instance=ExtResource("2_0f4fv")]
 position = Vector2(850, 359)
 
 [node name="Meat" parent="." instance=ExtResource("7_oa0b3")]
-position = Vector2(183, 348)
+position = Vector2(182, 350)
 
 [node name="Puppy" parent="." instance=ExtResource("9_j1b4u")]
-position = Vector2(644, 348)
+position = Vector2(663, 360)

@@ -7,7 +7,7 @@
 
 [node name="Cucumber" type="Node2D"]
 texture_filter = 1
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 
 [node name="grabcomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("1_3an6i")]
 parent = NodePath("..")
@@ -17,7 +17,8 @@ polygon = PackedVector2Array(-24, -21.1, -24, -12.3, -11, 2.7, -11, 4.2, 9.5, 15
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_4pcj3")]
 parent = NodePath("..")
-health = 40.0
+grate_hardness = 6.0
+health = 15.0
 particle_color = Color(0.472267, 0.7, 0.273, 1)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="gratecomponent"]
@@ -27,5 +28,8 @@ polygon = PackedVector2Array(-24, -21.1, -24, -12.3, -11, 2.7, -11, 4.2, 9.5, 15
 texture = ExtResource("3_b76c5")
 
 [node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_7eon7")]
-color = Color(0.333333, 0.490196, 0.192157, 1)
+emission_sphere_radius = 25.0
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
+color = Color(0.48576, 0.72, 0.2808, 1)
 grate_component = NodePath("../gratecomponent")
