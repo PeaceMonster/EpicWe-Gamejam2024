@@ -25,19 +25,19 @@ position = Vector2(127, 129)
 position = Vector2(322, 137)
 
 [node name="Banana" parent="." instance=ExtResource("3_akfnk")]
-position = Vector2(497, 138)
+position = Vector2(653, 139)
 
 [node name="Cucumber" parent="." instance=ExtResource("5_cq6i6")]
-position = Vector2(696, 153)
+position = Vector2(473, 131)
 
 [node name="Beer" parent="." instance=ExtResource("4_mdrci")]
-position = Vector2(881, 143)
+position = Vector2(1016, 134)
 
 [node name="Fish" parent="." instance=ExtResource("6_ir4gw")]
 position = Vector2(452, 349)
 
 [node name="Watermelon" parent="." instance=ExtResource("10_lvait")]
-position = Vector2(1046, 135)
+position = Vector2(821, 110)
 
 [node name="Baby" parent="." instance=ExtResource("2_0f4fv")]
 position = Vector2(850, 359)

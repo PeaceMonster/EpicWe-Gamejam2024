@@ -29,7 +29,7 @@ texture = ExtResource("3_b76c5")
 
 [node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_7eon7")]
 emission_sphere_radius = 25.0
-initial_velocity_min = 200.0
-initial_velocity_max = 200.0
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
 color = Color(0.48576, 0.72, 0.2808, 1)
 grate_component = NodePath("../gratecomponent")
