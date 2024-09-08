@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bat53wmsok6t2"]
+
+[ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="1_jrxmk"]
+[ext_resource type="PackedScene" uid="uid://3vgvltoa6dlo" path="res://scenes/Soundfx/grate_sound_emitter.tscn" id="2_5p7dt"]
+[ext_resource type="PackedScene" uid="uid://dfeuomg6mlqm6" path="res://scenes/GrateComponent/gratecomponent.tscn" id="2_ggtlo"]
+[ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="3_5ekks"]
+[ext_resource type="AudioStream" uid="uid://hhtwduhettpa" path="res://Sounds/baby_bad.mp3" id="3_g8o8a"]
+[ext_resource type="Texture2D" uid="uid://c0ug25eka47rp" path="res://Assets/baby.png" id="3_jou7s"]
+
+[node name="Baby" type="Node2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
+
+[node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_ggtlo")]
+parent = NodePath("..")
+
+[node name="GrateSoundEmitter" parent="gratecomponent" node_paths=PackedStringArray("grate_component") instance=ExtResource("2_5p7dt")]
+stream = ExtResource("3_g8o8a")
+grate_component = NodePath("..")
+
+[node name="GrateChunks" parent="gratecomponent" node_paths=PackedStringArray("grate_component") instance=ExtResource("3_5ekks")]
+color = Color(0.77, 0, 0, 1)
+grate_component = NodePath("..")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gratecomponent"]
+polygon = PackedVector2Array(-3, -30.7, -3, -29, -15.2, -29, -16.3, -26.8, -12.8, -22.1, -14, -19.5, -14, -9.3, -7.9, -2.1, -9.1, 0, -11.4, 0, -10, 7.4, -10, 8.2, -15, 13.2, -15, 18.1, -10.6, 21, -4, 21, -0.200001, 16, 4.9, 16, 7.9, 21, 14.1, 21, 16.1, 18, 18, 18, 18, 11, 11.8, 6.1, 10.9, -2.5, 13.9, -6, 16.2, -6, 15, -21.2, 15, -25.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="gratecomponent"]
+polygon = PackedVector2Array(-17, -27, -17, -22, -12, -22, -12, -27)
+
+[node name="grabcomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("1_jrxmk")]
+parent = NodePath("..")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="grabcomponent"]
+polygon = PackedVector2Array(-3, -30.7, -3, -29, -15.2, -29, -16.3, -26.8, -12.8, -22.1, -14, -19.5, -14, -9.3, -7.9, -2.1, -9.1, 0, -11.4, 0, -10, 7.4, -10, 8.2, -15, 13.2, -15, 18.1, -10.6, 21, -4, 21, -0.200001, 16, 4.9, 16, 7.9, 21, 14.1, 21, 16.1, 18, 18, 18, 18, 11, 11.8, 6.1, 10.9, -2.5, 13.9, -6, 16.2, -6, 15, -21.2, 15, -25.5)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="grabcomponent"]
+polygon = PackedVector2Array(-17, -27, -17, -22, -12, -22, -12, -27)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_jou7s")

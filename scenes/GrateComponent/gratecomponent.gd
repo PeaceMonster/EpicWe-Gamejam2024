@@ -3,6 +3,7 @@ extends Area2D
 class_name GrateComponent
 
 signal grate_start
+signal grate_stop
 
 @export var parent : Node2D
 @export var grate_hardness : = 10.0
@@ -21,6 +22,7 @@ func grate(velocity: float, delta: float):
 	
 	if health <= 0:
 		EventBus.done_grating_emit()
+		emit_signal("grate_stop")
 		parent.queue_free()
 
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3vgvltoa6dlo"]
+
+[ext_resource type="Script" path="res://scenes/Soundfx/grate_sound_emitter.gd" id="1_orgm5"]
+
+[node name="GrateSoundEmitter" type="AudioStreamPlayer"]
+script = ExtResource("1_orgm5")
