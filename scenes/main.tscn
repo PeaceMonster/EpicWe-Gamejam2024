@@ -101,7 +101,7 @@ texture = ExtResource("11_f3suw")
 libraries = {
 "": SubResource("AnimationLibrary_26771")
 }
-speed_scale = 0.5
+speed_scale = 0.1
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(574.778, 324)
