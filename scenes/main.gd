@@ -14,7 +14,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func improve_score(amount: int = 1) -> void:
+func improve_score(amount: int = 100) -> void:
 	score += amount
 	score_label.text = str(score)
 	$ScoreLabel/AudioStreamPlayer2D.play()
