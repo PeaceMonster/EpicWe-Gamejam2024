@@ -5,6 +5,7 @@
  - Soundfx
   - Conveyor
  - Backdrop
+  - Props
  - Sizing
  - Tweaking
   - Weight
