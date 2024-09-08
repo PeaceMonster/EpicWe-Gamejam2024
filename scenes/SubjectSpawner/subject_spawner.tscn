@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://dnsjlh8k6xg8t"]
+
+[ext_resource type="Script" path="res://scenes/SubjectSpawner/SubjectSpawner.gd" id="1_oct0y"]
+[ext_resource type="PackedScene" uid="uid://cuc5i8tvyxpg1" path="res://scenes/Fruit/onion.tscn" id="2_33tfa"]
+[ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_ofq3i"]
+[ext_resource type="PackedScene" uid="uid://cj8j80gyotjr4" path="res://scenes/Fruit/cucumber.tscn" id="4_xjnt8"]
+[ext_resource type="PackedScene" uid="uid://c4028wfe8aykd" path="res://scenes/Fruit/meat.tscn" id="5_02wl5"]
+[ext_resource type="PackedScene" uid="uid://cobr0rixlp10j" path="res://scenes/Fruit/fish.tscn" id="6_7vefs"]
+[ext_resource type="PackedScene" uid="uid://8fqgluqgr5i8" path="res://scenes/Fruit/beer.tscn" id="7_hkmvy"]
+[ext_resource type="PackedScene" uid="uid://2kym6jgtl4o0" path="res://scenes/Fruit/puppy.tscn" id="8_582u0"]
+
+[sub_resource type="Animation" id="Animation_haq7x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(826.485, 445)]
+}
+
+[sub_resource type="Animation" id="Animation_ocxsb"]
+resource_name = "new_spawn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-380, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1dwt"]
+_data = {
+"RESET": SubResource("Animation_haq7x"),
+"new_spawn": SubResource("Animation_ocxsb")
+}
+
+[node name="SubjectSpawner" type="Node2D"]
+script = ExtResource("1_oct0y")
+subjects = Array[PackedScene]([ExtResource("2_33tfa"), ExtResource("3_ofq3i"), ExtResource("4_xjnt8"), ExtResource("5_02wl5"), ExtResource("6_7vefs"), ExtResource("7_hkmvy"), ExtResource("8_582u0")])
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(826.485, 445)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../SpawnPoint")
+libraries = {
+"": SubResource("AnimationLibrary_o1dwt")
+}
+speed_scale = 0.5
