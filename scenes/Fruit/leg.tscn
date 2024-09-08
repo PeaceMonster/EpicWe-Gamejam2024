@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="4_3inev"]
 
 [node name="Leg" type="Node2D"]
+position = Vector2(-19, -7)
 scale = Vector2(3, 3)
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("1_5vr1u")]
