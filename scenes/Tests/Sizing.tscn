@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=3 uid="uid://wnjmnf8xp21j"]
+
+[ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_vb3w3"]
+[ext_resource type="PackedScene" uid="uid://8sgipt06fb1d" path="res://scenes/Fruit/baby.tscn" id="2_0f4fv"]
+[ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_akfnk"]
+[ext_resource type="PackedScene" uid="uid://8fqgluqgr5i8" path="res://scenes/Fruit/beer.tscn" id="4_mdrci"]
+[ext_resource type="PackedScene" uid="uid://cj8j80gyotjr4" path="res://scenes/Fruit/cucumber.tscn" id="5_cq6i6"]
+[ext_resource type="PackedScene" uid="uid://cobr0rixlp10j" path="res://scenes/Fruit/fish.tscn" id="6_ir4gw"]
+[ext_resource type="PackedScene" uid="uid://c4028wfe8aykd" path="res://scenes/Fruit/meat.tscn" id="7_oa0b3"]
+[ext_resource type="PackedScene" uid="uid://cuc5i8tvyxpg1" path="res://scenes/Fruit/onion.tscn" id="8_bf1cp"]
+[ext_resource type="PackedScene" uid="uid://2kym6jgtl4o0" path="res://scenes/Fruit/puppy.tscn" id="9_j1b4u"]
+[ext_resource type="PackedScene" uid="uid://drsmqlpywiomd" path="res://scenes/Fruit/watermelon.tscn" id="10_lvait"]
+
+[node name="Sizing" type="Node2D"]
+
+[node name="Grater" parent="." instance=ExtResource("1_vb3w3")]
+position = Vector2(127, 129)
+
+[node name="Onion" parent="." instance=ExtResource("8_bf1cp")]
+position = Vector2(295, 140)
+
+[node name="Banana" parent="." instance=ExtResource("3_akfnk")]
+position = Vector2(450, 137)
+
+[node name="Cucumber" parent="." instance=ExtResource("5_cq6i6")]
+position = Vector2(651, 141)
+
+[node name="Beer" parent="." instance=ExtResource("4_mdrci")]
+position = Vector2(831, 144)
+
+[node name="Fish" parent="." instance=ExtResource("6_ir4gw")]
+position = Vector2(448, 359)
+
+[node name="Watermelon" parent="." instance=ExtResource("10_lvait")]
+position = Vector2(1046, 135)
+
+[node name="Baby" parent="." instance=ExtResource("2_0f4fv")]
+position = Vector2(811, 358)
+
+[node name="Meat" parent="." instance=ExtResource("7_oa0b3")]
+position = Vector2(183, 348)
+
+[node name="Puppy" parent="." instance=ExtResource("9_j1b4u")]
+position = Vector2(644, 348)

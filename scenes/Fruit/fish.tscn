@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cobr0rixlp10j"]
+[gd_scene load_steps=5 format=3 uid="uid://cobr0rixlp10j"]
 
 [ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="1_yl4mf"]
 [ext_resource type="PackedScene" uid="uid://dfeuomg6mlqm6" path="res://scenes/GrateComponent/gratecomponent.tscn" id="2_5vh6c"]
 [ext_resource type="Texture2D" uid="uid://dmj885e5uqenj" path="res://Assets/fish.png" id="3_k2gur"]
+[ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="4_aswd2"]
 
 [node name="Fish" type="Node2D"]
 texture_filter = 1
@@ -23,3 +24,7 @@ polygon = PackedVector2Array(9, -20.8, -4, -22.2, -4, -20, -29, 0, -29, 4, -14, 
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_k2gur")
+
+[node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_aswd2")]
+color = Color(0.74902, 0.184314, 0.14902, 1)
+grate_component = NodePath("../gratecomponent")

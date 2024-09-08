@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgspvwc2plmvh"]
+
+[ext_resource type="PackedScene" uid="uid://dfeuomg6mlqm6" path="res://scenes/GrateComponent/gratecomponent.tscn" id="1_5vr1u"]
+[ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="2_7xhcu"]
+[ext_resource type="Texture2D" uid="uid://c2rad0mku4ljv" path="res://Assets/leg.png" id="3_kl23v"]
+[ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="4_3inev"]
+
+[node name="Leg" type="Node2D"]
+scale = Vector2(3, 3)
+
+[node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("1_5vr1u")]
+parent = NodePath("..")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gratecomponent"]
+polygon = PackedVector2Array(18, -20.3, 18, -18.8, 13.7, -18, 10.9, -18, -7, 8.4, -7, 9.7, -17.3, 14, -23, 14, -23, 20.7, -8.2, 23, -3.4, 23, 1, 20.1, 1, 13.9, 13.7, 4, 16.2, 4, 20.3, -3.3, 27.6, 0, 31.2, 0, 30, -13.2, 30, -18.8)
+
+[node name="grabcomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_7xhcu")]
+parent = NodePath("..")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grabcomponent"]
+polygon = PackedVector2Array(18, -20.3, 18, -18.8, 13.7, -18, 10.9, -18, -7, 8.4, -7, 9.7, -17.3, 14, -23, 14, -23, 20.7, -8.2, 23, -3.4, 23, 1, 20.1, 1, 13.9, 13.7, 4, 16.2, 4, 20.3, -3.3, 27.6, 0, 31.2, 0, 30, -13.2, 30, -18.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_kl23v")
+
+[node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_3inev")]
+color = Color(0.89, 0, 0, 1)
+grate_component = NodePath("../gratecomponent")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://2kym6jgtl4o0"]
+[gd_scene load_steps=5 format=3 uid="uid://2kym6jgtl4o0"]
 
 [ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="1_lpf0k"]
 [ext_resource type="PackedScene" uid="uid://dfeuomg6mlqm6" path="res://scenes/GrateComponent/gratecomponent.tscn" id="2_nmydq"]
 [ext_resource type="Texture2D" uid="uid://dd3fdta4sn05g" path="res://Assets/puppy.png" id="3_6o2ln"]
+[ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="4_m21h8"]
 
 [node name="Puppy" type="Node2D"]
 texture_filter = 1
@@ -24,3 +25,6 @@ polygon = PackedVector2Array(-13, -22.1, -13, -20, -17, -17, -17, -8.2, -15, -6.
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_6o2ln")
+
+[node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_m21h8")]
+grate_component = NodePath("../gratecomponent")

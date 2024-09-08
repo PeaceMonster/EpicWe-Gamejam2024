@@ -1,21 +1,23 @@
 extends Area2D
 
+class_name GrateComponent
+
+signal grate_start
+
 @export var parent : Node2D
 @export var grate_hardness : = 10.0
 @export var health : = 20.0
-@onready var particles : = $CPUParticles2D
 @export var particle_color : Color = Color.WHITE
 var rng = RandomNumberGenerator.new()
 var grating := false
 var prev_pos := Vector2(0,0)
 
-func _ready() -> void:
-	particles.color = particle_color
+
 
 func grate(velocity: float, delta: float):
 	if velocity * delta > grate_hardness / 100:
 		health -= 0.1
-		particles.emitting = true
+		emit_signal("grate_start")
 	
 	if health <= 0:
 		EventBus.done_grating_emit()
