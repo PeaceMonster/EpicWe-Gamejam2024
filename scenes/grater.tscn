@@ -4,6 +4,7 @@
 
 [node name="Grater" type="Node2D"]
 texture_filter = 1
+scale = Vector2(2, 2)
 
 [node name="StaticBody2D" type="Area2D" parent="."]
 collision_layer = 2

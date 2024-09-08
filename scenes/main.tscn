@@ -1,26 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://lduf66oqur7l"]
+[gd_scene load_steps=8 format=3 uid="uid://lduf66oqur7l"]
 
 [ext_resource type="PackedScene" uid="uid://cmdhyn1vg17rh" path="res://scenes/VisualArm2/visual_arm_2.tscn" id="1_2u1ck"]
 [ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_sicte"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_yymtn"]
 [ext_resource type="PackedScene" uid="uid://0e5avvpsk4dp" path="res://scenes/MouseTarget/mouse_target.tscn" id="5_mli8h"]
+[ext_resource type="Texture2D" uid="uid://2ly00kug4smf" path="res://Assets/table.png" id="6_ynfir"]
+[ext_resource type="Texture2D" uid="uid://drq7l78716wrp" path="res://Assets/backdrop.webp" id="10_5n6y1"]
 [ext_resource type="PackedScene" uid="uid://b1uubw6agml6o" path="res://scenes/ConveyorBelt/conveyor_belt.tscn" id="12_vdydk"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_yymtn")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(574.778, 324)
+scale = Vector2(0.601852, 0.601852)
+texture = ExtResource("10_5n6y1")
+
 [node name="VisualArm2" parent="." node_paths=PackedStringArray("ik_target") instance=ExtResource("1_2u1ck")]
-position = Vector2(1112, 321)
+position = Vector2(1112, 227)
 scale = Vector2(3, 3)
 ik_target = NodePath("../MouseTarget")
 
 [node name="MouseTarget" parent="." groups=["mouse_target"] instance=ExtResource("5_mli8h")]
-position = Vector2(694, 309)
-
-[node name="Grater" parent="." instance=ExtResource("1_sicte")]
-position = Vector2(664, 321)
-scale = Vector2(3, 3)
+position = Vector2(837, 301)
 
 [node name="ConveyorBelt" parent="." instance=ExtResource("12_vdydk")]
-position = Vector2(868, 553)
+position = Vector2(1081, 556)
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(653, 575)
+scale = Vector2(4.14063, 4.14063)
+texture = ExtResource("6_ynfir")
+
+[node name="Grater" parent="." instance=ExtResource("1_sicte")]
+position = Vector2(672, 400)
