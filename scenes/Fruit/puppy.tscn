@@ -26,7 +26,7 @@ grab_component = NodePath("..")
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_nmydq")]
 parent = NodePath("..")
 grate_hardness = 6.0
-health = 100.0
+health = 80.0
 particle_color = Color(1, 0, 0, 1)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="gratecomponent"]
