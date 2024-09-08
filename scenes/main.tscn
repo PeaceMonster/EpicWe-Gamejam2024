@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://lduf66oqur7l"]
+[gd_scene load_steps=15 format=3 uid="uid://lduf66oqur7l"]
 
 [ext_resource type="PackedScene" uid="uid://cmdhyn1vg17rh" path="res://scenes/VisualArm2/visual_arm_2.tscn" id="1_2u1ck"]
 [ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_sicte"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://drq7l78716wrp" path="res://Assets/backdrop.webp" id="10_5n6y1"]
 [ext_resource type="Texture2D" uid="uid://td203c01w5f6" path="res://Assets/cauldronfull.png" id="10_ov26o"]
 [ext_resource type="Texture2D" uid="uid://de6qs65lahlh2" path="res://Assets/lightpattern.png" id="11_f3suw"]
+[ext_resource type="AudioStream" uid="uid://cxlo6uvn513df" path="res://Sounds/coin.wav" id="12_2wim6"]
 [ext_resource type="Texture2D" uid="uid://cxptsqhxgecpm" path="res://Assets/lamp.png" id="12_u62og"]
 [ext_resource type="PackedScene" uid="uid://b1uubw6agml6o" path="res://scenes/ConveyorBelt/conveyor_belt.tscn" id="12_vdydk"]
 
@@ -72,6 +73,17 @@ position = Vector2(837, 301)
 
 [node name="ConveyorBelt" parent="." instance=ExtResource("12_vdydk")]
 position = Vector2(1081, 556)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 5.0
+offset_right = 108.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 96
+text = "0"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ScoreLabel"]
+stream = ExtResource("12_2wim6")
 
 [node name="Props" type="Node" parent="."]
 
