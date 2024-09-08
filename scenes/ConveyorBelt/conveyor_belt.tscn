@@ -23,4 +23,7 @@ texture = ExtResource("1_on728")
 position = Vector2(311, -111)
 subjects = Array[PackedScene]([ExtResource("3_31b3i"), ExtResource("4_3axel"), ExtResource("5_unfkc"), ExtResource("6_a1qfb"), ExtResource("7_d7wf1"), ExtResource("8_ch4ak"), ExtResource("9_e0pkr"), ExtResource("10_hhxhk")])
 
+[node name="Timer" type="Timer" parent="SubjectSpawner"]
+one_shot = true
+
 [editable path="SubjectSpawner"]
