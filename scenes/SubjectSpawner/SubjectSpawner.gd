@@ -4,16 +4,20 @@ extends Node2D
 
 @onready var spawn_point: Marker2D = $SpawnPoint
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var timer: Timer = $Timer
 
 var spawn_index: int = 0
 var spawn_point_init: Vector2
 
 func _ready() -> void:
-	EventBus.done_grating.connect(spawn_next)
+	EventBus.done_grating.connect(delayed_spawn)
 	spawn_point_init = spawn_point.position
 	
 	spawn_item(subjects[spawn_index])
 	spawn_index += 1
+
+func delayed_spawn():
+	timer.start()
 
 func spawn_item(item: PackedScene):
 	var spawned = item.instantiate()

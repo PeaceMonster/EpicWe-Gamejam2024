@@ -26,4 +26,6 @@ subjects = Array[PackedScene]([ExtResource("3_31b3i"), ExtResource("4_3axel"), E
 [node name="Timer" type="Timer" parent="SubjectSpawner"]
 one_shot = true
 
+[connection signal="timeout" from="SubjectSpawner/Timer" to="SubjectSpawner" method="spawn_next"]
+
 [editable path="SubjectSpawner"]
