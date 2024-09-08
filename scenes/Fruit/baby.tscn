@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bat53wmsok6t2"]
+[gd_scene load_steps=8 format=3 uid="uid://bat53wmsok6t2"]
 
 [ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="1_jrxmk"]
 [ext_resource type="PackedScene" uid="uid://3vgvltoa6dlo" path="res://scenes/Soundfx/grate_sound_emitter.tscn" id="2_5p7dt"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="3_5ekks"]
 [ext_resource type="AudioStream" uid="uid://hhtwduhettpa" path="res://Sounds/baby_bad.mp3" id="3_g8o8a"]
 [ext_resource type="Texture2D" uid="uid://c0ug25eka47rp" path="res://Assets/baby.png" id="3_jou7s"]
+[ext_resource type="PackedScene" uid="uid://dxbuvjfu3ykgu" path="res://scenes/WeightComponent/weightcomponent.tscn" id="6_w2ee1"]
 
 [node name="Baby" type="Node2D"]
 texture_filter = 1
@@ -14,6 +15,7 @@ scale = Vector2(4, 4)
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_ggtlo")]
 parent = NodePath("..")
+health = 80.0
 
 [node name="GrateSoundEmitter" parent="gratecomponent" node_paths=PackedStringArray("grate_component") instance=ExtResource("2_5p7dt")]
 stream = ExtResource("3_g8o8a")
@@ -41,6 +43,9 @@ polygon = PackedVector2Array(-3, -30.7, -3, -29, -15.2, -29, -16.3, -26.8, -12.8
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="grabcomponent"]
 polygon = PackedVector2Array(-17, -27, -17, -22, -12, -22, -12, -27)
+
+[node name="Weightcomponent" parent="grabcomponent" node_paths=PackedStringArray("grab_component") instance=ExtResource("6_w2ee1")]
+grab_component = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_jou7s")
