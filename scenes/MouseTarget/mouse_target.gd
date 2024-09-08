@@ -3,12 +3,13 @@ extends Node2D
 @export var drag_coefficient = 5.0
 
 @onready var visual_arm_2 = $"../VisualArm2"
-@export var max_distance: float = 440
-var base_point: Vector2
+var max_reach: float
+var reach_base: Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	base_point = visual_arm_2.get_base_point()
+	reach_base = visual_arm_2.get_base_point()
+	max_reach = visual_arm_2.get_reach() * visual_arm_2.global_scale.x
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -20,12 +21,9 @@ func _input(event: InputEvent) -> void:
 		
 
 func clamp_own_position() -> void:
-	var offset: Vector2 = self.global_position - base_point
+	var offset: Vector2 = self.global_position - reach_base
 	var noffset: Vector2 = offset.normalized()
-	self.position = base_point + noffset * max_distance * min(
-		(offset.length() / max_distance),
+	self.position = reach_base + noffset * max_reach * min(
+		(offset.length() / max_reach),
 		1
 	)
-	
-	
-	pass

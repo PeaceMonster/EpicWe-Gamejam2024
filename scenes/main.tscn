@@ -39,8 +39,8 @@ scale = Vector2(0.601852, 0.601852)
 texture = ExtResource("10_5n6y1")
 
 [node name="VisualArm2" parent="." node_paths=PackedStringArray("ik_target") instance=ExtResource("1_2u1ck")]
-position = Vector2(1112, 227)
-scale = Vector2(3, 3)
+position = Vector2(1169, 269)
+scale = Vector2(3.25, 3.25)
 ik_target = NodePath("../MouseTarget")
 
 [node name="MouseTarget" parent="." groups=["mouse_target"] instance=ExtResource("5_mli8h")]
