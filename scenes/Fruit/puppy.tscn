@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://2kym6jgtl4o0"]
+[gd_scene load_steps=8 format=3 uid="uid://2kym6jgtl4o0"]
 
 [ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="1_lpf0k"]
+[ext_resource type="PackedScene" uid="uid://dxbuvjfu3ykgu" path="res://scenes/WeightComponent/weightcomponent.tscn" id="2_1854y"]
 [ext_resource type="PackedScene" uid="uid://dfeuomg6mlqm6" path="res://scenes/GrateComponent/gratecomponent.tscn" id="2_nmydq"]
 [ext_resource type="Texture2D" uid="uid://dd3fdta4sn05g" path="res://Assets/puppy.png" id="3_6o2ln"]
 [ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="4_m21h8"]
@@ -17,6 +18,10 @@ parent = NodePath("..")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grabcomponent"]
 polygon = PackedVector2Array(-13, -22.1, -13, -20, -17, -17, -17, -8.2, -15, -6.2, -15, -4.7, -12.5, -3.6, -11.3, -4.9, -9.6, 2, -10, 17.9, -10, 23.4, -1, 21.6, -1, 17, 0.299999, 17, 1, 20.4, 1, 23.6, 7.1, 22, 13, 22, 20, 13, 22.4, 13, 20.7, 3, 15.4, 3, 13.9, 9.1, 8.9, 1.2, 12, -3.4, 12, -5, 16.2, -5, 15, -17.2, 15, -20.9)
+
+[node name="Weightcomponent" parent="grabcomponent" node_paths=PackedStringArray("grab_component") instance=ExtResource("2_1854y")]
+weight = 7.0
+grab_component = NodePath("..")
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_nmydq")]
 parent = NodePath("..")
