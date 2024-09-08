@@ -7,7 +7,7 @@
 emitting = false
 amount = 20
 one_shot = true
-explosiveness = 0.6
+explosiveness = 0.25
 texture = ExtResource("1_lieh6")
 emission_shape = 1
 emission_sphere_radius = 52.95
