@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bat53wmsok6t2"]
+[gd_scene load_steps=7 format=3 uid="uid://uvoas53tpytj"]
 
 [ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="1_jrxmk"]
 [ext_resource type="PackedScene" uid="uid://3vgvltoa6dlo" path="res://scenes/Soundfx/grate_sound_emitter.tscn" id="2_5p7dt"]
