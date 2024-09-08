@@ -7,7 +7,7 @@
 
 [node name="Fish" type="Node2D"]
 texture_filter = 1
-scale = Vector2(2.5, 2.5)
+scale = Vector2(3, 3)
 
 [node name="grabcomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("1_yl4mf")]
 parent = NodePath("..")
@@ -27,5 +27,8 @@ polygon = PackedVector2Array(9, -20.8, -4, -22.2, -4, -20, -29, 0, -29, 4, -14, 
 texture = ExtResource("3_k2gur")
 
 [node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_aswd2")]
+emission_sphere_radius = 25.0
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
 color = Color(0.74902, 0.184314, 0.14902, 1)
 grate_component = NodePath("../gratecomponent")

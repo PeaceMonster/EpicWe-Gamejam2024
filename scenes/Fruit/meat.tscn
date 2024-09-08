@@ -7,7 +7,7 @@
 
 [node name="Meat" type="Node2D"]
 texture_filter = 1
-scale = Vector2(3.8, 3.8)
+scale = Vector2(4, 4)
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("1_0is7o")]
 parent = NodePath("..")
@@ -27,7 +27,7 @@ texture = ExtResource("3_6ai4t")
 
 [node name="GrateChunks" parent="Sprite2D" node_paths=PackedStringArray("grate_component") instance=ExtResource("4_ggj6e")]
 emission_sphere_radius = 21.72
-initial_velocity_min = 124.88
-initial_velocity_max = 124.88
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
 color = Color(0.86, 0, 0, 1)
 grate_component = NodePath("../../gratecomponent")
