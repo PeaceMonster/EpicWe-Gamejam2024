@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwtp3yfih7h65"]
+
+[ext_resource type="Texture2D" uid="uid://dkchet0esywc5" path="res://Assets/font.png" id="1_5cl1d"]
+[ext_resource type="Script" path="res://start_screen.gd" id="1_ochg4"]
+[ext_resource type="PackedScene" uid="uid://lduf66oqur7l" path="res://scenes/main.tscn" id="2_k1e3e"]
+
+[node name="Start Screen" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_ochg4")
+game = ExtResource("2_k1e3e")
+
+[node name="Font" type="Sprite2D" parent="."]
+position = Vector2(660, 126)
+scale = Vector2(5.375, 5.375)
+texture = ExtResource("1_5cl1d")

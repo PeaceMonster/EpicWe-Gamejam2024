@@ -10,6 +10,7 @@ position = Vector2(-53.9431, -1.21162)
 position = Vector2(734.153, 257.039)
 rotation = -3.08664
 scale = Vector2(0.999912, 0.999912)
+grate_hardness = 20.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gratecomponent"]
 position = Vector2(693.296, 218.099)
@@ -20,5 +21,8 @@ polygon = PackedVector2Array(-38, -11.9, -62.4, -32, -63.4, -32, -65, -31.3, -65
 [node name="GrateChunks" parent="gratecomponent" node_paths=PackedStringArray("grate_component") instance=ExtResource("2_dmh4m")]
 position = Vector2(756.293, 207.295)
 rotation = -3.14159
+emission_sphere_radius = 25.0
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
 color = Color(1, 0, 0, 1)
 grate_component = NodePath("..")

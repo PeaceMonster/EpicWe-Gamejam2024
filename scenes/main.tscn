@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://lduf66oqur7l"]
+[gd_scene load_steps=14 format=3 uid="uid://lduf66oqur7l"]
 
 [ext_resource type="PackedScene" uid="uid://cmdhyn1vg17rh" path="res://scenes/VisualArm2/visual_arm_2.tscn" id="1_2u1ck"]
 [ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_sicte"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://drq7l78716wrp" path="res://Assets/backdrop.webp" id="10_5n6y1"]
 [ext_resource type="Texture2D" uid="uid://td203c01w5f6" path="res://Assets/cauldronfull.png" id="10_ov26o"]
 [ext_resource type="Texture2D" uid="uid://de6qs65lahlh2" path="res://Assets/lightpattern.png" id="11_f3suw"]
+[ext_resource type="Texture2D" uid="uid://cxptsqhxgecpm" path="res://Assets/lamp.png" id="12_u62og"]
 [ext_resource type="PackedScene" uid="uid://b1uubw6agml6o" path="res://scenes/ConveyorBelt/conveyor_belt.tscn" id="12_vdydk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ltwv"]
@@ -90,3 +91,18 @@ position = Vector2(221, 521)
 scale = Vector2(4.8125, 4.8125)
 sprite_frames = SubResource("SpriteFrames_3ltwv")
 frame_progress = 0.470525
+
+[node name="Lamp" type="Sprite2D" parent="Props"]
+position = Vector2(245, -27)
+scale = Vector2(2.1875, 2.1875)
+texture = ExtResource("12_u62og")
+
+[node name="Lamp2" type="Sprite2D" parent="Props"]
+position = Vector2(590, -27)
+scale = Vector2(2.1875, 2.1875)
+texture = ExtResource("12_u62og")
+
+[node name="Lamp3" type="Sprite2D" parent="Props"]
+position = Vector2(952, -27)
+scale = Vector2(2.1875, 2.1875)
+texture = ExtResource("12_u62og")
