@@ -1,6 +1,6 @@
 extends CPUParticles2D
 
-@export var grate_component : GrateComponent
+@export var grate_component: GrateComponent
 
 func emit() -> void:
 	self.emitting = true
