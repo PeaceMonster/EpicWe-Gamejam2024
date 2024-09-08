@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://8fqgluqgr5i8" path="res://scenes/Fruit/beer.tscn" id="8_ch4ak"]
 [ext_resource type="PackedScene" uid="uid://2kym6jgtl4o0" path="res://scenes/Fruit/puppy.tscn" id="9_e0pkr"]
 [ext_resource type="PackedScene" uid="uid://bat53wmsok6t2" path="res://scenes/Fruit/baby.tscn" id="10_hhxhk"]
-[ext_resource type="PackedScene" uid="uid://yiecutbbdf4c" path="res://scenes/killhand.tscn" id="11_1cm6r"]
+[ext_resource type="PackedScene" path="res://scenes/killhand.tscn" id="11_1cm6r"]
 
 [node name="ConveyorBelt" type="Node2D"]
 texture_filter = 1
