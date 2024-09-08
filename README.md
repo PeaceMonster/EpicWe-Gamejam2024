@@ -2,8 +2,6 @@
 
 ## Backlog
 
- - Soundfx
-  - Conveyor
  - Backdrop
   - Props
  - Sizing
