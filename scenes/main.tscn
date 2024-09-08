@@ -1,57 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://lduf66oqur7l"]
+[gd_scene load_steps=6 format=3 uid="uid://lduf66oqur7l"]
 
 [ext_resource type="PackedScene" uid="uid://cmdhyn1vg17rh" path="res://scenes/VisualArm2/visual_arm_2.tscn" id="1_2u1ck"]
 [ext_resource type="PackedScene" uid="uid://ch0ukib0edke5" path="res://scenes/grater.tscn" id="1_sicte"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_yymtn"]
-[ext_resource type="PackedScene" uid="uid://cuc5i8tvyxpg1" path="res://scenes/Fruit/onion.tscn" id="2_riuaf"]
-[ext_resource type="PackedScene" uid="uid://cj8j80gyotjr4" path="res://scenes/Fruit/cucumber.tscn" id="3_lqxpi"]
-[ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_taqu3"]
 [ext_resource type="PackedScene" uid="uid://0e5avvpsk4dp" path="res://scenes/MouseTarget/mouse_target.tscn" id="5_mli8h"]
-[ext_resource type="PackedScene" uid="uid://c4028wfe8aykd" path="res://scenes/Fruit/meat.tscn" id="5_qm23h"]
-[ext_resource type="PackedScene" uid="uid://cobr0rixlp10j" path="res://scenes/Fruit/fish.tscn" id="6_74t0m"]
-[ext_resource type="PackedScene" uid="uid://8fqgluqgr5i8" path="res://scenes/Fruit/beer.tscn" id="7_5l8km"]
-[ext_resource type="PackedScene" uid="uid://2kym6jgtl4o0" path="res://scenes/Fruit/puppy.tscn" id="8_pfeih"]
-
-[sub_resource type="Animation" id="Animation_haq7x"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1238, 539)]
-}
-
-[sub_resource type="Animation" id="Animation_ocxsb"]
-resource_name = "new_spawn"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1.27456),
-"update": 0,
-"values": [Vector2(1438, 539), Vector2(931.69, 539)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1dwt"]
-_data = {
-"RESET": SubResource("Animation_haq7x"),
-"new_spawn": SubResource("Animation_ocxsb")
-}
+[ext_resource type="PackedScene" uid="uid://b1uubw6agml6o" path="res://scenes/ConveyorBelt/conveyor_belt.tscn" id="12_vdydk"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_yymtn")
-subjects = Array[PackedScene]([ExtResource("2_riuaf"), ExtResource("3_taqu3"), ExtResource("3_lqxpi"), ExtResource("5_qm23h"), ExtResource("6_74t0m"), ExtResource("7_5l8km"), ExtResource("8_pfeih")])
 
 [node name="VisualArm2" parent="." node_paths=PackedStringArray("ik_target") instance=ExtResource("1_2u1ck")]
 position = Vector2(1112, 321)
@@ -61,16 +18,9 @@ ik_target = NodePath("../MouseTarget")
 [node name="MouseTarget" parent="." groups=["mouse_target"] instance=ExtResource("5_mli8h")]
 position = Vector2(694, 309)
 
-[node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(1238, 539)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../SpawnPoint")
-libraries = {
-"": SubResource("AnimationLibrary_o1dwt")
-}
-speed_scale = 0.5
-
 [node name="Grater" parent="." instance=ExtResource("1_sicte")]
 position = Vector2(664, 321)
 scale = Vector2(3, 3)
+
+[node name="ConveyorBelt" parent="." instance=ExtResource("12_vdydk")]
+position = Vector2(868, 553)
