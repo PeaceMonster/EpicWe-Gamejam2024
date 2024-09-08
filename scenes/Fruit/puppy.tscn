@@ -30,8 +30,13 @@ polygon = PackedVector2Array(-13, -22.1, -13, -20, -17, -17, -17, -8.2, -15, -6.
 texture = ExtResource("3_6o2ln")
 
 [node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_m21h8")]
+emission_sphere_radius = 17.75
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
+color = Color(1, 0, 0, 1)
 grate_component = NodePath("../gratecomponent")
 
 [node name="GrateSoundEmitter" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("5_ag82r")]
 stream = ExtResource("6_1snq5")
+volume_db = 10.0
 grate_component = NodePath("../gratecomponent")
