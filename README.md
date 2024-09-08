@@ -1,9 +1,6 @@
 # Gamejam Game
 
 ## Backlog
-
- - Backdrop
-  - Props
  - Sizing
  - Tweaking
   - Weight

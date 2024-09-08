@@ -5,6 +5,7 @@ class_name GrateComponent
 signal grate_start
 signal grate_stop
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @export var parent : Node2D
 @export var grate_hardness : = 10.0
 @export var health : = 20.0
@@ -19,10 +20,13 @@ func grate(velocity: float, delta: float):
 	if velocity * delta > grate_hardness / 100:
 		health -= 0.1
 		emit_signal("grate_start")
+		if not audio_stream_player.playing:
+			audio_stream_player.play()
 	
 	if health <= 0:
 		EventBus.done_grating_emit()
 		emit_signal("grate_stop")
+		audio_stream_player.stop()
 		parent.queue_free()
 
 
