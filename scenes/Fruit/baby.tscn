@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://uvoas53tpytj"]
+[gd_scene load_steps=7 format=3 uid="uid://bat53wmsok6t2"]
 
 [ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="1_jrxmk"]
 [ext_resource type="PackedScene" uid="uid://3vgvltoa6dlo" path="res://scenes/Soundfx/grate_sound_emitter.tscn" id="2_5p7dt"]
@@ -9,6 +9,7 @@
 
 [node name="Baby" type="Node2D"]
 texture_filter = 1
+position = Vector2(0, -40)
 scale = Vector2(4, 4)
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_ggtlo")]
@@ -16,9 +17,13 @@ parent = NodePath("..")
 
 [node name="GrateSoundEmitter" parent="gratecomponent" node_paths=PackedStringArray("grate_component") instance=ExtResource("2_5p7dt")]
 stream = ExtResource("3_g8o8a")
+volume_db = 10.0
 grate_component = NodePath("..")
 
 [node name="GrateChunks" parent="gratecomponent" node_paths=PackedStringArray("grate_component") instance=ExtResource("3_5ekks")]
+emission_sphere_radius = 25.0
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
 color = Color(0.77, 0, 0, 1)
 grate_component = NodePath("..")
 
