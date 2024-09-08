@@ -5,7 +5,6 @@
  - Tweaking
   - Weight
   - Particles
-  - Conveyor speed
   - Params
   - Volume
  - Score
