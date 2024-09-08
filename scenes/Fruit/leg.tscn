@@ -7,10 +7,12 @@
 
 [node name="Leg" type="Node2D"]
 position = Vector2(-19, -7)
-scale = Vector2(3, 3)
+scale = Vector2(5, 5)
 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("1_5vr1u")]
 parent = NodePath("..")
+grate_hardness = 8.0
+health = 30.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gratecomponent"]
 polygon = PackedVector2Array(18, -20.3, 18, -18.8, 13.7, -18, 10.9, -18, -7, 8.4, -7, 9.7, -17.3, 14, -23, 14, -23, 20.7, -8.2, 23, -3.4, 23, 1, 20.1, 1, 13.9, 13.7, 4, 16.2, 4, 20.3, -3.3, 27.6, 0, 31.2, 0, 30, -13.2, 30, -18.8)
@@ -26,5 +28,8 @@ texture_filter = 1
 texture = ExtResource("3_kl23v")
 
 [node name="GrateChunks" parent="." node_paths=PackedStringArray("grate_component") instance=ExtResource("4_3inev")]
+emission_sphere_radius = 25.0
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
 color = Color(0.89, 0, 0, 1)
 grate_component = NodePath("../gratecomponent")

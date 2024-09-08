@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://8fqgluqgr5i8"]
+[gd_scene load_steps=6 format=3 uid="uid://8fqgluqgr5i8"]
 
 [ext_resource type="PackedScene" uid="uid://fs8ocydrch60" path="res://scenes/Grabable/grabcomponent.tscn" id="1_53ocq"]
 [ext_resource type="PackedScene" uid="uid://dfeuomg6mlqm6" path="res://scenes/GrateComponent/gratecomponent.tscn" id="2_mbrg6"]
 [ext_resource type="Texture2D" uid="uid://cuxhxp3jpqxom" path="res://Assets/beer.png" id="3_0p75m"]
 [ext_resource type="PackedScene" uid="uid://ccmmy7d143n1p" path="res://scenes/GrateComponent/grate_chunks.tscn" id="4_d6q7n"]
+[ext_resource type="PackedScene" uid="uid://dxbuvjfu3ykgu" path="res://scenes/WeightComponent/weightcomponent.tscn" id="5_3worq"]
 
 [node name="Beer" type="Node2D"]
 texture_filter = 1
@@ -18,7 +19,7 @@ polygon = PackedVector2Array(-14, -26.1, -14, -24, -16.7, -22, -20.2, -22, -16, 
 [node name="gratecomponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_mbrg6")]
 parent = NodePath("..")
 grate_hardness = 7.0
-health = 60
+health = 10.0
 particle_color = Color(0.980392, 0.772549, 0.298039, 1)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="gratecomponent"]
@@ -33,3 +34,7 @@ initial_velocity_min = 200.0
 initial_velocity_max = 200.0
 color = Color(0.980392, 0.772549, 0.298039, 1)
 grate_component = NodePath("../gratecomponent")
+
+[node name="Weightcomponent" parent="." node_paths=PackedStringArray("grab_component") instance=ExtResource("5_3worq")]
+weight = 9.0
+grab_component = NodePath("../grabcomponent")
