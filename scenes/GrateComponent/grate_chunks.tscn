@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccmmy7d143n1p"]
 
 [ext_resource type="Texture2D" uid="uid://yrcgjsq4eiv" path="res://Assets/chunk.png" id="1_lieh6"]
-[ext_resource type="Script" path="res://scenes/GrateComponent/grate_chunks.gd" id="1_qyf6t"]
+[ext_resource type="Script" uid="uid://bev4fcv787ww5" path="res://scenes/GrateComponent/grate_chunks.gd" id="1_qyf6t"]
 
 [node name="GrateChunks" type="CPUParticles2D"]
 emitting = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dnsjlh8k6xg8t"]
 
-[ext_resource type="Script" path="res://scenes/SubjectSpawner/SubjectSpawner.gd" id="1_oct0y"]
+[ext_resource type="Script" uid="uid://blxgp8qoaxccg" path="res://scenes/SubjectSpawner/SubjectSpawner.gd" id="1_oct0y"]
 [ext_resource type="PackedScene" uid="uid://cuc5i8tvyxpg1" path="res://scenes/Fruit/onion.tscn" id="2_33tfa"]
 [ext_resource type="PackedScene" uid="uid://c1k5qd1ap6o6o" path="res://scenes/Fruit/banana.tscn" id="3_ofq3i"]
 [ext_resource type="PackedScene" uid="uid://cj8j80gyotjr4" path="res://scenes/Fruit/cucumber.tscn" id="4_xjnt8"]
@@ -94,8 +94,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o1dwt"]
 _data = {
-"RESET": SubResource("Animation_haq7x"),
-"new_spawn": SubResource("Animation_ocxsb")
+&"RESET": SubResource("Animation_haq7x"),
+&"new_spawn": SubResource("Animation_ocxsb")
 }
 
 [node name="SubjectSpawner" type="Node2D"]

@@ -17,7 +17,7 @@ var prev_pos := Vector2(0,0)
 
 
 func grate(velocity: float, delta: float):
-	if velocity * delta > grate_hardness / 100:
+	if velocity * delta > grate_hardness / 200:
 		health -= 0.1
 		print(health)
 		emit_signal("grate_start")
@@ -44,7 +44,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed('skip_item'):
 		EventBus.done_grating_emit()
 		parent.queue_free()
-		
+	if event.is_action_pressed('skip'):
+		get_tree().change_scene_to_file("res://start_screen.tscn")	
 
 func _process(delta: float) -> void:
 	if grating and not prev_pos == self.global_position:
